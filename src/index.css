@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  background-color: black;
+  background-size: cover;
+  color: #14c714;
+  padding: 1px;
+  text-align: center;
+}
+
+.app input {
+  padding: 10px 5px;
+  border: 1px hidden rgba(255, 255, 255, 0.8);
+  background: rgba(36, 114, 36, 0.44);
+  color: #14c714;
+  font: 12px "Press Start 2P";
+}
+
+.app .search {
+  display: inline;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+  padding: 10px 10px 10px 10px;
+}
+
+::placeholder {
+  color: #14c714;
+  font: 12px "Press Start 2P";
+}
+
+h5 {
+  width: 70%;
+}
+
+.app .results {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  text-overflow: ellipsis;
+  margin: 100px;
+}
+
+.app .error {
+  color: #ad1611;
+  text-decoration-line: underline;
+}
