@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import styled from "styled-components";
 
 
 function App() {
+
+
 
     const [data, setData] = useState({});
     const [movie, setMovie] = useState('');
@@ -33,13 +36,11 @@ function App() {
                     onChange={event => setMovie(event.target.value)}
                     onKeyPress={searchMovie}
                     placeholder="movie title..."/>
-            </div>
-            <div>
-              <input value={year}
-                     type="text"
-                     onChange={event => setYear(event.target.value)}
-                     onKeyPress={searchMovie}
-                     placeholder="year..."/>
+                <input value={year}
+                       type="text"
+                       onChange={event => setYear(event.target.value)}
+                       onKeyPress={searchMovie}
+                       placeholder="year..."/>
             </div>
       </div>
       <div className="results">
@@ -57,7 +58,7 @@ function App() {
               <h4>{data.imdbRating ? <h4>IMDb Rating: {data.imdbRating}</h4> : null}</h4>
           </div>
           <div>
-              <img src={data.Poster}/>
+              <img className="image" src={data.Poster ? data.Poster : null}/>
           </div>
       </div>
     </div>

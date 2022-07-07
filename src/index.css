@@ -23,17 +23,60 @@ code {
   text-align: center;
 }
 
+.app .top {
+  animation: glitch2 0.05s infinite;
+}
+
+.app .image {
+  opacity: 90%;
+  border-style: double;
+  animation: glitch2 0.05s infinite;
+
+}
+
+@keyframes glitch1 {
+  0% {
+    transform: scaleX(101%);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(100%);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scaleX(101%);
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform:translateX(0.5px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-0.5px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(0.5px);
+    opacity: 1;
+  }
+}
+
 .app input {
   padding: 10px 5px;
+  margin: 30px 20px 30px 20px;
   border: 1px hidden rgba(255, 255, 255, 0.8);
   background: rgba(36, 114, 36, 0.44);
   color: #14c714;
   font: 12px "Press Start 2P";
+  animation: glitch1 0.001s infinite;
 }
 
 .app .search {
-  display: inline;
-  justify-content: center;
+  display: contents;
+  gap: 50px;
   text-align: center;
   margin: 30px;
   padding: 10px 10px 10px 10px;
@@ -50,13 +93,14 @@ h5 {
 
 .app .results {
   display: flex;
-  justify-content: center;
   text-align: justify;
   text-overflow: ellipsis;
   margin: 100px;
+  animation: glitch2 0.05s infinite;
 }
 
 .app .error {
   color: #ad1611;
   text-decoration-line: underline;
+  animation: glitch3 0.05s infinite;
 }
