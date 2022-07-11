@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import axios from "axios";
-import styled from "styled-components";
-
+import MovieCounter from "./components/MovieCounter";
+import GetUserName from "./components/GetUserName";
 
 function App() {
-
-
-
     const [data, setData] = useState({});
     const [movie, setMovie] = useState('');
     const [year, setYear] = useState('')
@@ -29,6 +26,7 @@ function App() {
       <div className="top">
         <h1>simple movie search engine</h1>
         <h3>perfect cinematic to match your mood</h3>
+          <GetUserName></GetUserName>
       </div>
       <div className="search">
             <div><input value={movie}
@@ -41,6 +39,7 @@ function App() {
                        onChange={event => setYear(event.target.value)}
                        onKeyPress={searchMovie}
                        placeholder="year..."/>
+                <MovieCounter/>
             </div>
       </div>
       <div className="results">

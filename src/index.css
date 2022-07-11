@@ -31,7 +31,20 @@ code {
   opacity: 90%;
   border-style: double;
   animation: glitch2 0.05s infinite;
+}
 
+.app .button {
+  animation: glitch2 0.05s infinite;
+  border-style: double;
+  color: #14c714;
+  background-color: rgba(20, 199, 20, 0.3);
+  width: 30px;
+  height: 30px;
+  border-color: #14c714;
+}
+
+.app.usernameInput {
+  text-align: center;
 }
 
 @keyframes glitch1 {
@@ -66,7 +79,7 @@ code {
 
 .app input {
   padding: 10px 5px;
-  margin: 30px 20px 30px 20px;
+  margin: 10px 20px 30px 20px;
   border: 1px hidden rgba(255, 255, 255, 0.8);
   background: rgba(36, 114, 36, 0.44);
   color: #14c714;
