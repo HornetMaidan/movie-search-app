@@ -38,11 +38,11 @@ function App() {
                        onKeyPress={searchMovie}
                        placeholder="year..."/>
                 <MovieCounter/>
+                <h1 className="error">{data.Error ? <h1>movie not found!</h1> : null}</h1>
             </div>
       </div>
       <div className="results">
           <div>
-              <h1 className="error">{data.Error ? <h1>movie not found!</h1> : null}</h1>
               <h3>{data.Title ? <h3>{data.Title}, {data.Year}</h3> : null}</h3>
               <h4>{data.Genre ? <h4>Genre: {data.Genre}</h4> : null}</h4>
               <h4>{data.Actors ? <h4>Actors: {data.Actors}</h4> : null}</h4>
