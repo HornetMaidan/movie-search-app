@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import MovieCounter from "./components/MovieCounter";
-import GetUserName from "./components/GetUserName";
 
 function App() {
     const [data, setData] = useState({});
@@ -26,7 +25,6 @@ function App() {
       <div className="top">
         <h1>simple movie search engine</h1>
         <h3>perfect cinematic to match your mood</h3>
-          <GetUserName></GetUserName>
       </div>
       <div className="search">
             <div><input value={movie}
